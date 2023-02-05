@@ -1,10 +1,18 @@
 <script>
-	export default {
-	name: 'App',
+export default{
+data(){
+return{
+    name: 'Polina',
+    surname: 'Shapkina',
+}
+}
 }
 </script>
+
 <template>
-	<div>
-		smeshariki
-	</div>
+<div >{{ name }}</div>
+<div >{{ surname }}</div>
 </template>
+
+<style >
+</style>
