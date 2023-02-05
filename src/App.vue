@@ -23,11 +23,11 @@ Krosh: function () {
 
 <template>
 <button @click="Nyusha">Nyusha</button>
-<p v-if="visible">Nyusha</p>
+<p>{{visible ? 'Nyusha' : '!!!!'}}</p>
 <button @click="Pin">Pin</button>
-<p v-if="visible2">Pin</p>
+<p>{{visible2 ? 'Pin' : '!!!!'}}</p>
 <button @click="Krosh">Krosh</button>
-<p v-if="visible3">Krosh</p>
+<p>{{visible3 ? 'Krosh' : '!!!!'}}</p>
 </template>
 
 <style >
