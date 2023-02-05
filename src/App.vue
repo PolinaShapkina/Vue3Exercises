@@ -2,18 +2,27 @@
 export default{
 data(){
 return{
-    isSmeshariki: [1, -2, 3, -4, 5],
+    Smeshariki: [
+    {
+        id: 1,
+        name: 'Krosh',
+    },
+    {
+        id: 2,
+        name: 'Pin',
+    },
+    {
+        id: 3,
+        name: 'Nyusha',
+    },
+    ]
 }
 }
 }
 </script>
 
 <template>
-<ul>
-    <template v-for="elem in isSmeshariki">
-    <li v-if="elem > 0 ">{{ elem }}</li>
-    </template>
-</ul>
+<p class= "styled" v-for="prod in Smeshariki" :key='Smeshariki.id'>{{ prod.name }}</p>
 </template>
 
 <style >
