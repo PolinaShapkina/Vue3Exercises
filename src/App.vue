@@ -2,30 +2,21 @@
 export default{
 data(){
 return{
-    isSmeshariki: {a:'100$', b:'200$', c:'300$'},
+    isSmeshariki: [1, 2, 3],
 }
 }
 }
 </script>
 
 <template>
-<ul>
-    <li v-for="elem in isSmeshariki">{{ elem }}</li>
-</ul>
+<div v-for="elem in isSmeshariki">
+<p>{{ elem }}</p>
+<p class="divider"> </p>
+</div>
 <br>
-<br>
-<ul>
-    <li v-for="(key, elem) in isSmeshariki"> {{ elem }} - {{ key }}</li>
-</ul>
-<br>
-<br>
-<ul>
-    <li v-for="(key, elem, index) in isSmeshariki"> {{ elem }} - {{ key }} - {{ index }}</li>
-</ul>
-<br>
-<br>
-<ul>
-    <li v-for="(key, elem, index) in isSmeshariki"> {{ elem }} - {{ key }} - {{ index+1 }}</li>
+<ul v-for="elem in isSmeshariki">
+    <li>{{ elem }}</li>
+    <li class="divider"> </li>
 </ul>
 </template>
 
