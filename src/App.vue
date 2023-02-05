@@ -2,20 +2,18 @@
 export default{
 data(){
 return{
-    isSmeshariki: true,
-}
-},
-methods: {
-Smeshariki: function(){
-this.isSmeshariki = false;
+    isSmeshariki: [1, 2, 3, 4, 5],
 }
 }
 }
 </script>
 
 <template>
-<button @click="Smeshariki">Smeshariki</button>
-<p v-show="isSmeshariki">Nyusha</p>
+<div v-for="elem in isSmeshariki">{{ elem }}</div>
+<br>
+<div v-for="elem in isSmeshariki">{{ elem*elem }}</div>
+<br>
+<ul v-for="elem in isSmeshariki">{{ elem }}</ul>
 </template>
 
 <style >
