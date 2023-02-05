@@ -2,16 +2,15 @@
 export default{
 data(){
 return{
-    name: 'Polina',
-    surname: 'Shapkina',
+    text: 'page',
+    href: 'page.html',
 }
 }
 }
 </script>
 
 <template>
-<div >{{ name }}</div>
-<div >{{ surname }}</div>
+<a href="page.html">page</a>
 </template>
 
 <style >
