@@ -2,16 +2,24 @@
 export default{
 data(){
 return{
-    age: 25,
+    smeshariki: true,
+}
+},
+methods: {
+Smeshariki: function(){
+this.smeshariki = false;
 }
 }
 }
 </script>
 
 <template>
-<p v-if="age < 18">Подросток</p>
-<p v-else-if="19 < age && age < 25">Молодой человек</p>
-<p v-else="age > 26">Мужчина</p>
+<button @click="Smeshariki">Smeshariki</button>
+<div v-if="smeshariki">
+<p>Pin</p>
+<p>Nyusha</p>
+<p>Krosh</p>
+</div>
 </template>
 
 <style >
