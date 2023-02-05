@@ -12,7 +12,8 @@ show: function(){
 </script>
 
 <template>
-<button @click="show">date</button>
+<button  v-on:mouseover="show">наведение</button>
+<button  @click="show">нажатие</button>
 </template>
 
 <style >
