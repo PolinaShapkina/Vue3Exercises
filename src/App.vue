@@ -3,19 +3,29 @@ export default{
 data(){
 return{
     visible: true,
-    visible1: false,
-	hidden: true,
-    hidden1: false,
+btnHide: true,
+btnVis: false,
 }
 },
+methods: {
+hide: function(){
+    this.visible = false;
+    this.btnHide = false;
+    this.btnVis = true;
+},
+vis: function(){
+    this.visible = true;
+    this.btnHide = true;
+    this.btnVis = false;
+}
+}
 }
 </script>
 
 <template>
-<p v-if="visible">Krosh</p>
-<p v-if="!visible1">Pin</p>
-<p v-if="hidden">Olga</p>
-<p v-if="!hidden1">Nyusha</p>
+<button @click="vis" v-if="btnVis">visible</button>
+<button @click="hide" v-if="btnHide">hide</button>
+<p v-if="visible">Smeshariki</p>
 </template>
 
 <style >
