@@ -2,27 +2,29 @@
 export default{
 data(){
 return{
-    num1: 1,
-    num2: 2,
-    text: 'polina'
+    date: '6'
 }
 },
 methods: {
 show: function(){
-    let text = this.cape(this.text)
-    alert(text);
-    // сумма чисел;
+    let date = this.dayOfWeek(this.date);
+    alert(date);
 },
-cape: function(str){
-    return str[0].toUpperCase() + str.slice(1);
-}
+dayOfWeek: function(date){
+    let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+    return days[date];
+},
+main: function(){
+    const dayOfWeekDigit = new Date().getDay();
+    let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+    return dayOfWeekDigit[days]
+},
+
 }
 }
 </script>
 
 <template>
-<div>{{ text }}</div>
-<div>{{ num1 + num2 }}</div>
 <button v-on:mouseover="show">наведение</button>
 <button @click="show">нажатие</button>
 </template>
