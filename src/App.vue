@@ -2,12 +2,12 @@
 export default{
 data(){
 return{
-    smeshariki: true,
+    isSmeshariki: true,
 }
 },
 methods: {
 Smeshariki: function(){
-this.smeshariki = false;
+this.isSmeshariki = false;
 }
 }
 }
@@ -15,11 +15,7 @@ this.smeshariki = false;
 
 <template>
 <button @click="Smeshariki">Smeshariki</button>
-<div v-if="smeshariki">
-<p>Pin</p>
-<p>Nyusha</p>
-<p>Krosh</p>
-</div>
+<p v-show="isSmeshariki">Nyusha</p>
 </template>
 
 <style >
