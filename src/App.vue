@@ -2,22 +2,24 @@
 export default{
 data(){
 return{
-
+    cssClasses: 'Smeshariki',
 }
 }
 }
 </script>
 
 <template>
-<p>Krosh</p>
-<p1>Pin</p1>
+<p :class="cssClasses">Smeshariki</p>
 </template>
 
 <style >
-p {
-		color: rgb(0, 255, 238);
-	}
-p1 {
-		color: rgb(0, 13, 255);
-	}
+.Smeshariki {
+    padding: 10px;
+    margin: 10px;
+    background: rgb(160, 204, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
 </style>
