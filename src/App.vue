@@ -2,25 +2,23 @@
 export default{
 data(){
 return{
-    smeshariki: ' ',
-    conclave: ' ',
+    check_mark: true,
+    visible: true,
 }
 },
 methods: {
-list: function(){
-}
+Smeshariki: function () {
+    this.check_mark = false;
+    this.visible = !this.visible;
+},
 }
 }
 </script>
 
 <template>
-<textarea class="text-field__input" v-model="smeshariki"></textarea>
-<p>{{ smeshariki }}</p>
-<br>
-<button @click="Polina">Polina</button>
-<ul>
-<li v-for="Smeshariki in smeshariki">{{ Smeshariki }}</li>
-</ul>
+<input class="text-field__input" type="checkbox" v-model="check_mark"> 
+<button @click="Smeshariki">Smeshariki</button>
+<p v-if="visible">{{ check_mark ? 'Pin' : 'Krosh' }}</p>
 </template>
 
 <style>
