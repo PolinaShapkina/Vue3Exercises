@@ -3,18 +3,32 @@ export default{
 data(){
 return{
     cssClasses: 'Smeshariki',
-    obj: {
-    done: true,
-    selected: false,
+    visible: true,
+    style: {
+    hidden: true,
 }
+}
+},
+methods: {
+setDone:function(){
+this.style.hidden = false;
+},
+setTwo: function(){
+this.style.hidden = true;
+},
+smeshariki: function () {
+    this.visible = !this.visible;
 }
 }
 }
 </script>
 
 <template>
-<p :class="cssClasses">Smeshariki</p>
-<p :class="obj">Krosh</p>
+<button @click="smeshariki">Smeshariki</button>
+<p class="Smeshariki" v-if="visible">Smeshariki</p>
+<p :class="style">Conclave</p>
+<button @click="setDone">показывает</button>
+<button @click="setTwo">прячет</button>
 </template>
 
 <style >
@@ -27,22 +41,7 @@ return{
     text-decoration: none;
     font-size: 20px;
 }
-.selected{
-    padding: 10px;
-    margin: 10px;
-    background: rgb(234, 129, 16);
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 20px;
-}
-.done {
-    padding: 10px;
-    margin: 10px;
-    background: rgb(20, 247, 213);
-    color: rgb(12, 51, 245);
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 20px;
+p.hidden{
+display: none;
 }
 </style>
