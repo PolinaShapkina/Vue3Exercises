@@ -2,23 +2,27 @@
 export default{
 data(){
 return{
-    check_mark: true,
-    visible: true,
+    languages: [],
 }
-},
-methods: {
-Smeshariki: function () {
-    this.check_mark = false;
-    this.visible = !this.visible;
-},
 }
 }
 </script>
 
 <template>
-<input class="text-field__input" type="checkbox" v-model="check_mark"> 
-<button @click="Smeshariki">Smeshariki</button>
-<p v-if="visible">{{ check_mark ? 'Pin' : 'Krosh' }}</p>
+<div>
+<input type="checkbox" v-model="languages" value="Английский">
+<label>Английский</label>
+<br>
+<input type="checkbox" v-model="languages" value="Русский">
+<label>Русский</label>
+<br>
+<input type="checkbox" v-model="languages" value="Испанский">
+<label>Испанский</label>
+<ol>
+<li v-for="elem in languages">{{ elem }}</li>
+</ol>
+</div>
+<br>
 </template>
 
 <style>
