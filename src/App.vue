@@ -2,14 +2,21 @@
 export default{
 data(){
 return{
+message: 'Polina',
+number: 'Shapkina',
 }
+},
+methods: {
 }
 }
 </script>
 
 <template>
-<p :style="{color: 'green', background: 'yellow'}">Smeshariki</p>
-<p :style="{fontWeight: 'bold', fontStyle: 'italic'}">Krosh</p>
+<input class="text-field__input" v-model="message">
+<p :style="{textTransform: 'uppercase'}">{{ message }}</p>
+<br>
+<input class="text-field__input" v-model="number">
+<p>{{ number*number }}</p>
 </template>
 
 <style>
