@@ -2,34 +2,25 @@
 export default{
 data(){
 return{
-    num: 0,
-    res: 0,
-sum: 0,
-num1: 0, 
-num2: 0,
+    smeshariki: ' ',
+    conclave: ' ',
 }
 },
 methods: {
-Smeshariki: function () {
-    this.res = Math.sqrt(this.num);
-},
-smeshariki:function(){
-    this.sum = this.num1 + this.num2;
+list: function(){
 }
 }
 }
 </script>
 
 <template>
-<p>{{ res }}</p>
-<input class="text-field__input" v-model="num">
-<button @click="Smeshariki">квадратный корень</button>
+<textarea class="text-field__input" v-model="smeshariki"></textarea>
+<p>{{ smeshariki }}</p>
 <br>
-<p>{{ sum }}</p>
-<input class="text-field__input" v-model=num1>
-<input class="text-field__input" v-model=num2>
-<button @click="smeshariki">сумма</button>
-<br>
+<button @click="Polina">Polina</button>
+<ul>
+<li v-for="Smeshariki in smeshariki">{{ Smeshariki }}</li>
+</ul>
 </template>
 
 <style>
