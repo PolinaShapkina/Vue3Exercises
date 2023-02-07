@@ -1,17 +1,22 @@
 <script>
 export default {
-    props: {
-        name: String, 
-        salary: Number, 
-        age: Number
+    emits: ['show', 'show1'],
+    data() {
+        return {
+        }
+    },
+    methods: {
+        aaa() {
+            this.$emit('show');
+        },
+        bbb() {
+            this.$emit('show1');
+        },
     }
 }
 </script>
 
 <template>
-<p>{{ name }} 
-<br>
-{{ salary }} 
-<br>
-{{ age }}</p>
+<button  @click="aaa">Smeshariki</button>
+<button  @click="bbb">Student</button>
 </template>
