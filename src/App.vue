@@ -8,7 +8,7 @@ components: {
 </script>
 
 <template>
-<Smeshariki name="Polina" surn="Shapkina" age="18"/>
+<Smeshariki :name="['Pin', 'Krosh', 'Nyusha']"/>
 </template>
 <style>
 </style>
