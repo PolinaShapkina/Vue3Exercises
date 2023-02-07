@@ -1,5 +1,6 @@
 <script>
 import Smeshariki from './components/User.vue'
+import UserForm from './components/UserForm.vue'
 
 
 export default {
@@ -13,37 +14,34 @@ data() {
         },
         {
         id: 2,
-        name: 'Nyusha',
+        name: 'Krosh',
         surn: 'Smeshariki'
         },
         {
         id: 3,
-        name: 'Krosh',
+        name: 'Nyusha',
         surn: 'Smeshariki'
         },
     ],
     }
 },
 components: {
-    Smeshariki
+    Smeshariki, UserForm
 },
 methods: {
-    remove(id) {
-    this.smeshariki = this.smeshariki.filter((smesharikis) => {
-        return smesharikis.id !== id;
-    })
+    add(name, surn){
+    let id = this.smeshariki.length + 1;
+    this.smeshariki.push({
+        id, name, surn
+    });
     }
 }
 }
 </script>
 
 <template>
-<Smeshariki v-for   ="smesharikis in smeshariki"
-		:id     ="smesharikis.id"
-		:name   ="smesharikis.name"
-		:surn   ="smesharikis.surn"
-		@remove ="remove"
-		:key    ="smesharikis.id"/>
+<UserForm @add="add"/>
 </template>
+
 <style>
 </style>
