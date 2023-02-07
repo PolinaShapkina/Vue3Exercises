@@ -1,15 +1,15 @@
 <script>
 export default {
-    props: ['name', 'salary', 'age'],
-    data() {
-        return {
-        }
+    props: {
+        name: String, 
+        salary: Number, 
+        age: Number
     }
 }
 </script>
 
 <template>
-<p class="smeshariki">{{ name }} 
+<p>{{ name }} 
 <br>
 {{ salary }} 
 <br>
