@@ -7,16 +7,16 @@ export default {
     },
     methods: {
         aaa() {
-            this.$emit('show');
+            this.$emit('show','Polina Shapkina');
         },
         bbb() {
-            this.$emit('show1');
+            this.$emit('show1','Diana Kyzmenko','12345');
         },
     }
 }
 </script>
 
 <template>
-<button  @click="aaa">Smeshariki</button>
-<button  @click="bbb">Student</button>
+<button  @click="aaa">Name</button>
+<button  @click="bbb">Salary</button>
 </template>

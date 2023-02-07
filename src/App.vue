@@ -10,11 +10,11 @@ components: {
     Smeshariki
 },
 methods: {
-    Smeshariki() {
-    alert('Pin, Nyusha, Krosh');
+    aaa(name) {
+    console.log(name);
     },
-    Student(){
-    alert('David, Diana, Polina')
+    bbb(name, salary){
+console.log(name, salary);
     }
 }
 }
@@ -22,7 +22,7 @@ methods: {
 </script>
 
 <template>
-<Smeshariki @show="Smeshariki" @show1="Student" />
+<Smeshariki @show="aaa" @show1="bbb"/>
 </template>
 <style>
 </style>
