@@ -2,19 +2,28 @@
 export default{
 data(){
 return{
-Smeshariki: ' ',
-smeshariki: ' '
+    smeshariki: '',
+    Smeshariki: ['Nyusha', 'Pin', 'Krosh'],
+}
+},
+methods: {
+addSmeshariki: function () {
+    this.Smeshariki.unshift(this.smeshariki);
 }
 }
 }
 </script>
 
 <template>
-<input class="text-field__input" v-model="Smeshariki">
-<p>{{ Smeshariki }}</p>
+<ul class="styled">
+<li v-for="(item, index) in 
+			Smeshariki" :key="index">
+    {{ item }}
+</li>
+</ul>
+<input class="text-field__input" v-model="smeshariki">
 <br>
-<a href="#" class="inline-link-1" >Smeshariki</a>
-<p ></p>
+<button @click="addSmeshariki">add</button>
 </template>
 
 <style>
