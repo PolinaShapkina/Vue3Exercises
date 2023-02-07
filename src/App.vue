@@ -8,8 +8,7 @@ components: {
 </script>
 
 <template>
-<Smeshariki />
+<Smeshariki name="Polina" surn="Shapkina" age="18"/>
 </template>
-
 <style>
 </style>
